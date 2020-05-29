@@ -1,0 +1,20 @@
+{
+  "Functional Component": {
+    "prefix": "react-functional-component",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "type PropTypes = {",
+      "\tchildren: React.ReactNode;",
+      "};",
+      "",
+      "const Component = ({ children }: PropTypes): React.ReactElement => {",
+      "\treturn <>{children}</>;",
+      "};",
+      "",
+      "export default Component;",
+      ""
+    ],
+    "description": "Boilercode to initialize a React Functional Component."
+  }
+}
