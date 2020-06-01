@@ -5,7 +5,7 @@ import Col from '../src/components/Col';
 import Row from '../src/components/Row';
 
 export default {
-  title: 'Grid System',
+  title: 'Grid',
 };
 
 const renderCol = (
@@ -31,7 +31,7 @@ const renderCol = (
 const renderGrid = (length: number) =>
   Array.from({ length }).map((v, i) => renderCol(i + 1, i));
 
-export const BasicGrid = (): React.ReactElement => (
+export const Basic = (): React.ReactElement => (
   <>
     <Row justify="center">{renderGrid(24)}</Row>
     <br />
