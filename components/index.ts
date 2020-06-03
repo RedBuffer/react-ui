@@ -1,5 +1,7 @@
 export { default as Alert } from './alert';
 
+export { default as Avatar } from './avatar';
+
 export { default as Badge } from './badge';
 
 export { default as Button } from './button';
