@@ -5,15 +5,15 @@
 @import 'tailwindcss/utilities';
 
 .bg-default {
-  @apply bg-gray-200;
+  @apply bg-gray-300;
 }
 
 .text-default {
-  @apply text-gray-700;
+  @apply text-gray-800;
 }
 
 .bg-primary {
-  @apply bg-blue-200;
+  @apply bg-blue-300;
 }
 
 .text-primary {
@@ -21,23 +21,23 @@
 }
 
 .bg-secondary {
-  @apply bg-gray-200;
+  @apply bg-gray-700;
 }
 
 .text-secondary {
-  @apply text-gray-700;
+  @apply text-white;
 }
 
 .bg-success {
-  @apply bg-green-200;
+  @apply bg-green-400;
 }
 
 .text-success {
-  @apply text-green-800;
+  @apply text-green-700;
 }
 
 .bg-danger {
-  @apply bg-red-100;
+  @apply bg-red-400;
 }
 
 .text-danger {
@@ -45,7 +45,7 @@
 }
 
 .bg-warning {
-  @apply bg-yellow-200;
+  @apply bg-yellow-400;
 }
 
 .text-warning {
@@ -53,11 +53,11 @@
 }
 
 .bg-info {
-  @apply bg-blue-200;
+  @apply bg-blue-500;
 }
 
 .text-info {
-  @apply text-blue-700;
+  @apply text-white;
 }
 
 .bg-light {
