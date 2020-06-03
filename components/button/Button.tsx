@@ -1,8 +1,6 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import Throbber from '../Throbber';
-
 interface PropTypes
   extends Omit<
     React.DetailedHTMLProps<
@@ -41,7 +39,7 @@ const Component = ({
         disabled={loading || disabled}
         {...restProps}
       >
-        {loading ? <Throbber /> : children}
+        {children}
       </button>
 
       <style jsx>

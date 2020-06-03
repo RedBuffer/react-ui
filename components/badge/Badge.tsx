@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import * as classes from '../../config/classes';
+import * as classes from '../_util/classes';
 
 type Type =
   | 'dark'

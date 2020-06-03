@@ -8,12 +8,12 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDirs": ["src", "stories"],
+    "rootDirs": ["components", "stories"],
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*"],
+  "include": ["components/**/*"],
   "exclude": ["node_modules", "build", "scripts"]
 }

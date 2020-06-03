@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Card from '../src/components/Card';
+import { Card } from '../components';
 
 export default {
   title: 'Card',

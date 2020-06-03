@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Description from '../src/components/Description';
+import { Description } from '../components';
 
 export default {
   title: 'Description',
