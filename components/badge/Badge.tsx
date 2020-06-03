@@ -37,6 +37,7 @@ const Component = ({
         'rounded-full',
         `text-${type}`,
         'font-semibold',
+        'cursor-default',
         size && `text-${size}`,
       )}
     >

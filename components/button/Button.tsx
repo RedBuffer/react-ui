@@ -11,6 +11,8 @@ interface PropTypes
   > {
   block?: boolean;
 
+  className?: string;
+
   loading?: boolean;
 
   children: string;
@@ -28,17 +30,20 @@ interface PropTypes
 
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
+  shape?: 'circle' | 'round' | 'default';
+
   htmlType?: 'submit' | 'button' | 'reset';
 }
 
 const Component = ({
+  size,
   block,
-  style,
+  shape,
   loading,
   disabled,
   children,
   className,
-  type = 'dark',
+  type = 'default',
   htmlType = 'button',
   ...restProps
 }: PropTypes): React.ReactElement => {
@@ -46,15 +51,19 @@ const Component = ({
     <button
       {...restProps}
       type={htmlType}
+      disabled={disabled}
       className={classnames(
         className,
         'py-1',
         'px-4',
-        'rounded',
+        'shadow',
         'font-bold',
-        `bg-${type}`,
-        `text-${type}`,
-        'outline-none',
+        `btn-${type}`,
+        block && 'w-full',
+        size && `text-${size}`,
+        disabled && 'opacity-50',
+        disabled && 'cursor-not-allowed',
+        shape && (shape === 'circle' ? 'rounded-full' : 'rounded'),
       )}
     >
       {children}

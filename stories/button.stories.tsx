@@ -7,48 +7,53 @@ export default {
   component: Button,
 };
 
-export const LightButton = (): React.ReactElement => (
+const renderButton = (type, text = '', props = {}) => (
   <Button
-    type="light"
+    {...props}
+    type={type}
+    className="m-1"
     onClick={() => {
       alert('Hello button');
     }}
   >
-    Hello Button
+    {text || type}
   </Button>
 );
 
-export const DarkButton = (): React.ReactElement => (
-  <Button
-    type="dark"
-    onClick={() => {
-      alert('Hello button');
-    }}
-  >
-    Hello Button
-  </Button>
+export const Types = (): React.ReactElement => (
+  <>
+    {renderButton('default')}
+    {renderButton('primary')}
+    {renderButton('secondary')}
+    {renderButton('success')}
+    {renderButton('danger')}
+    {renderButton('warning')}
+    {renderButton('info')}
+    {renderButton('light')}
+    {renderButton('dark')}
+  </>
 );
 
-export const BlockButtonLight = (): React.ReactElement => (
-  <Button
-    block
-    type="light"
-    onClick={() => {
-      alert('Hello button');
-    }}
-  >
-    Hello Button
-  </Button>
+export const Sizes = (): React.ReactElement => (
+  <div style={{ width: '80vw' }}>
+    {renderButton('default', 'xs', { size: 'xs' })}
+    {renderButton('default', 'sm', { size: 'sm' })}
+    {renderButton('default', 'md', { size: 'md' })}
+    {renderButton('default', 'lg', { size: 'lg' })}
+    {renderButton('default', 'xl', { size: 'xl' })}
+    <br />
+    {renderButton('secondary', 'block', { block: true })}
+  </div>
 );
 
-export const BlockButtonDark = (): React.ReactElement => (
-  <Button
-    block
-    type="dark"
-    onClick={() => {
-      alert('Hello button');
-    }}
-  >
-    Hello Button
-  </Button>
+export const Shapes = (): React.ReactElement => (
+  <>
+    {renderButton('primary', 'default')}
+    {renderButton('primary', 'rounded', { shape: 'rounded' })}
+    {renderButton('primary', 'circle', { shape: 'circle' })}
+  </>
+);
+
+export const States = (): React.ReactElement => (
+  <>{renderButton('default', 'Disabled', { disabled: true })}</>
 );
