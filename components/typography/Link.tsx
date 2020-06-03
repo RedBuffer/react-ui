@@ -9,6 +9,8 @@ interface PropTypes
   href: string;
 
   children?: string;
+
+  className?: string;
 }
 
 const Component = ({
