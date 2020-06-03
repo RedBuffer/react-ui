@@ -1,24 +1,19 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import * as classes from '../_util/classes';
-
-type Type =
-  | 'dark'
-  | 'info'
-  | 'light'
-  | 'danger'
-  | 'primary'
-  | 'success'
-  | 'warning'
-  | 'secondary';
-
-type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-
 type PropTypes = {
-  type?: Type;
+  type?:
+    | 'dark'
+    | 'info'
+    | 'light'
+    | 'danger'
+    | 'primary'
+    | 'success'
+    | 'warning'
+    | 'secondary'
+    | 'default';
 
-  size?: Size;
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
   children?: string;
 
@@ -27,54 +22,22 @@ type PropTypes = {
 
 const Component = ({
   size,
-  type,
   children,
   className,
+  type = 'default',
 }: PropTypes): React.ReactElement => {
-  let color: string;
-  let background: string;
-
-  if (type === 'primary') {
-    color = classes.textPrimary;
-    background = classes.bgPrimary;
-  } else if (type === 'secondary') {
-    color = classes.textSecondary;
-    background = classes.bgSecondary;
-  } else if (type === 'dark') {
-    color = classes.textDark;
-    background = classes.bgDark;
-  } else if (type === 'light') {
-    color = classes.textLight;
-    background = classes.bgLight;
-  } else if (type === 'warning') {
-    color = classes.textWarning;
-    background = classes.bgWarning;
-  } else if (type === 'danger') {
-    color = classes.textDanger;
-    background = classes.bgDanger;
-  } else if (type === 'info') {
-    color = classes.textInfo;
-    background = classes.bgInfo;
-  } else if (type === 'success') {
-    color = classes.textSuccess;
-    background = classes.bgSuccess;
-  } else {
-    color = classes.textDefault;
-    background = classes.bgDefault;
-  }
-
   return (
     <span
       className={classnames(
         className,
         'px-2',
-        'inline-flex',
-        size && `text-${size}`,
         'leading-1',
-        'font-semibold',
+        `bg-${type}`,
+        'inline-flex',
         'rounded-full',
-        background,
-        color,
+        `text-${type}`,
+        'font-semibold',
+        size && `text-${size}`,
       )}
     >
       {children}

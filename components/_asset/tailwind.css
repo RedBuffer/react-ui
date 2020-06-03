@@ -3,3 +3,75 @@
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
+
+.bg-primary {
+  @apply bg-blue-200;
+}
+
+.text-primary {
+  @apply text-blue-700;
+}
+
+.bg-success {
+  @apply bg-green-200;
+}
+
+.text-success {
+  @apply text-green-800;
+}
+
+.bg-warning {
+  @apply bg-yellow-200;
+}
+
+.text-warning {
+  @apply text-yellow-700;
+}
+
+.bg-info {
+  @apply bg-blue-200;
+}
+
+.text-info {
+  @apply text-blue-700;
+}
+
+.bg-default {
+  @apply bg-gray-200;
+}
+
+.text-default {
+  @apply text-gray-700;
+}
+
+.bg-secondary {
+  @apply bg-gray-200;
+}
+
+.text-secondary {
+  @apply text-gray-700;
+}
+
+.bg-danger {
+  @apply bg-red-100;
+}
+
+.text-danger {
+  @apply text-red-800;
+}
+
+.bg-light {
+  @apply bg-white;
+}
+
+.text-light {
+  @apply text-black;
+}
+
+.bg-dark {
+  @apply bg-black;
+}
+
+.text-dark {
+  @apply text-white;
+}

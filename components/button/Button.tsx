@@ -15,7 +15,18 @@ interface PropTypes
 
   children: string;
 
-  type?: 'dark' | 'light';
+  type?:
+    | 'dark'
+    | 'info'
+    | 'light'
+    | 'danger'
+    | 'primary'
+    | 'success'
+    | 'warning'
+    | 'secondary'
+    | 'default';
+
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
   htmlType?: 'submit' | 'button' | 'reset';
 }
@@ -32,54 +43,22 @@ const Component = ({
   ...restProps
 }: PropTypes): React.ReactElement => {
   return (
-    <>
-      <button
-        type={htmlType}
-        className={classnames(className, `btn-${type}`, block && 'btn-block')}
-        disabled={loading || disabled}
-        {...restProps}
-      >
-        {children}
-      </button>
-
-      <style jsx>
-        {`
-          button {
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 500;
-            padding: 5px 12px;
-            border-radius: 3px;
-            font-stretch: condensed;
-            text-transform: uppercase;
-          }
-
-          button::-moz-focus-inner {
-            border: 0;
-          }
-
-          .btn-block {
-            width: 100%;
-          }
-
-          .btn-dark {
-            border: 0px;
-            color: white;
-            background: #333;
-          }
-
-          .btn-light {
-            border: 2px solid #d2d6db;
-            color: #61435b;
-            background: white;
-          }
-
-          .btn-light:hover {
-            background: #f5f6f7;
-          }
-        `}
-      </style>
-    </>
+    <button
+      {...restProps}
+      type={htmlType}
+      className={classnames(
+        className,
+        'py-1',
+        'px-4',
+        'rounded',
+        'font-bold',
+        `bg-${type}`,
+        `text-${type}`,
+        'outline-none',
+      )}
+    >
+      {children}
+    </button>
   );
 };
 
