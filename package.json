@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist storybook-static",
     "dev": "yarn build:css && start-storybook -p 6006",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "build:storybook": "build-storybook",
