@@ -29,7 +29,7 @@ export interface PropTypes {
 
   classes?: Classes;
 
-  item: React.ReactElement;
+  overlay: React.ReactElement;
 
   disabled?: boolean;
 
@@ -38,7 +38,7 @@ export interface PropTypes {
 
 const Dropdown = ({
   style,
-  item,
+  overlay,
   disabled,
   className,
   classes = {},
@@ -80,30 +80,10 @@ const Dropdown = ({
           classes.content,
         )}
       >
-        <a
-          className="p-4 block no-underline border-gray-400 bg-gray-100 text-black"
-          href="#"
-        >
-          Item 1
-        </a>
-        <a
-          className="p-4 block no-underline border-gray-400 bg-gray-100 text-black"
-          href="#"
-        >
-          Item 2
-        </a>
-        <a
-          className="p-4 block no-underline border-gray-400 bg-gray-100 text-black"
-          href="#"
-        >
-          Item 3
-        </a>
+        {overlay}
       </div>
       <style jsx>
         {`
-          .react-ui-dropdown-content a:hover {
-            background-color: #f1f1f1;
-          }
           .react-ui-dropdown:hover .react-ui-dropdown-content {
             display: block;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
