@@ -3,6 +3,7 @@
     "prefix": "react-functional-component",
     "body": [
       "import * as React from 'react';",
+      "import classnames from 'classnames';",
       "",
       "type PropTypes = {",
       "\tchildren: React.ReactNode;",
@@ -16,5 +17,22 @@
       ""
     ],
     "description": "Boilercode to initialize a React Functional Component."
+  },
+  "Story": {
+    "prefix": "react-story",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "import {} from '../components';",
+      "",
+      "export default {",
+      "\ttitle: '',",
+      "\tComponent: null,",
+      "};",
+      "",
+      "export const Basic = (): React.ReactElement => <></>;",
+      ""
+    ],
+    "description": "Boilercode to initialize a React Story."
   }
 }

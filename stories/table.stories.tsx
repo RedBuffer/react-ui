@@ -1,8 +1,6 @@
 import * as React from 'react';
 
-import Badge from '../src/components/Badge';
-import Media from '../src/components/Media';
-import Table from '../src/components/Table';
+import { Badge, Media, Table } from '../components';
 
 export default {
   title: 'Table',

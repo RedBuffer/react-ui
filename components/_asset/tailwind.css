@@ -1,0 +1,159 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+.bg-default {
+  @apply bg-gray-300;
+}
+
+.text-default {
+  @apply text-gray-800;
+}
+
+.bg-primary {
+  @apply bg-blue-300;
+}
+
+.text-primary {
+  @apply text-blue-700;
+}
+
+.bg-secondary {
+  @apply bg-gray-700;
+}
+
+.text-secondary {
+  @apply text-white;
+}
+
+.bg-success {
+  @apply bg-green-400;
+}
+
+.text-success {
+  @apply text-green-700;
+}
+
+.bg-danger {
+  @apply bg-red-400;
+}
+
+.text-danger {
+  @apply text-red-700;
+}
+
+.bg-warning {
+  @apply bg-yellow-400;
+}
+
+.text-warning {
+  @apply text-yellow-700;
+}
+
+.bg-info {
+  @apply bg-blue-500;
+}
+
+.text-info {
+  @apply text-white;
+}
+
+.bg-light {
+  @apply bg-white;
+}
+
+.text-light {
+  @apply text-black;
+}
+
+.bg-dark {
+  @apply bg-black;
+}
+
+.text-dark {
+  @apply text-white;
+}
+
+/* styles for button types */
+.btn-default {
+  @apply bg-gray-300;
+  @apply text-gray-800;
+}
+
+.btn-default:hover {
+  @apply bg-gray-400;
+}
+
+.btn-primary {
+  @apply bg-blue-700;
+  @apply text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-blue-800;
+}
+
+.btn-secondary {
+  @apply bg-gray-700;
+  @apply text-white;
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-800;
+}
+
+.btn-success {
+  @apply bg-green-700;
+  @apply text-white;
+}
+
+.btn-success:hover {
+  @apply bg-green-800;
+}
+
+.btn-danger {
+  @apply bg-red-700;
+  @apply text-white;
+}
+
+.btn-danger:hover {
+  @apply bg-red-800;
+}
+
+.btn-warning {
+  @apply bg-yellow-600;
+  @apply text-white;
+}
+
+.btn-warning:hover {
+  @apply bg-yellow-700;
+}
+
+.btn-info {
+  @apply bg-blue-500;
+  @apply text-white;
+}
+
+.btn-info:hover {
+  @apply bg-blue-600;
+}
+
+.btn-light {
+  @apply bg-white;
+  @apply text-gray-800;
+}
+
+.btn-light:hover {
+  @apply bg-gray-200;
+}
+
+.btn-dark {
+  @apply bg-black;
+  @apply text-white;
+}
+
+.btn-dark:hover {
+  @apply bg-gray-800;
+}

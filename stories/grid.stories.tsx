@@ -1,8 +1,7 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import Col from '../src/components/Col';
-import Row from '../src/components/Row';
+import { Col, Row } from '../components';
 
 export default {
   title: 'Grid',
