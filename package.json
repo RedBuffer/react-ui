@@ -8,6 +8,7 @@
     "clean": "rimraf dist",
     "dev": "yarn build:css && start-storybook -p 6006",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "test": "jest --silent  --testPathPattern .test.tsx",
     "build:storybook": "build-storybook",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },

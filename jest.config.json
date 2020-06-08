@@ -1,0 +1,11 @@
+{
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ],
+  "setupFiles": [
+    "./src/setupTests.tsx"
+  ],
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  }
+}
