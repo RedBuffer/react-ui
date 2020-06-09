@@ -62,7 +62,7 @@ const Dropdown = ({
           'react-ui-dropdown-btn',
           'p-4',
           'text-white',
-          'bg-blue-400',
+          'btn-primary',
           'border-0',
           'cursor-pointer',
           classes.button,
@@ -83,14 +83,6 @@ const Dropdown = ({
       >
         {overlay}
       </div>
-      <style jsx>
-        {`
-          .react-ui-dropdown:hover .react-ui-dropdown-content {
-            display: block;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          }
-        `}
-      </style>
     </div>
   );
 };

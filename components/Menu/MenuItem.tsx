@@ -26,19 +26,13 @@ const MenuItem = ({
         'm-0',
         'relative',
         'list-none',
+        'btn-light',
         className,
       )}
       style={style}
       {...restProps}
     >
       {children}
-      <style jsx>
-        {`
-          .react-ui-menu-item:hover {
-            background-color: #f1f1f1;
-          }
-        `}
-      </style>
     </li>
   );
 };
