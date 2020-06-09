@@ -28,6 +28,7 @@ const MenuItem = ({
         'list-none',
         className,
       )}
+      style={style}
       {...restProps}
     >
       {children}

@@ -54,6 +54,7 @@ const Dropdown = ({
         className,
         classes.dropdown,
       )}
+      style={style}
       {...restProps}
     >
       <button
