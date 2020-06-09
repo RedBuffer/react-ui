@@ -3,7 +3,7 @@
     "enzyme-to-json/serializer"
   ],
   "setupFiles": [
-    "./src/setupTests.tsx"
+    "./tests/setupTests.tsx"
   ],
   "transform": {
     "^.+\\.tsx?$": "ts-jest"

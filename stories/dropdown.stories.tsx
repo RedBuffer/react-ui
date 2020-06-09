@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import Dropdown from '../src/components/Dropdown';
-import Menu from '../src/components/Menu';
+import { Dropdown, Menu } from '../components';
 
 export default {
   title: 'Dropdown',

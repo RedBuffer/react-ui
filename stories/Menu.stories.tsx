@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Menu from '../src/components/Menu';
+import { Menu } from '../components';
 
 export default {
   title: 'Menu',
