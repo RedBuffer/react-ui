@@ -20,6 +20,8 @@ export { default as Layout } from './layout';
 
 export { default as Media } from './media';
 
+export { default as NavBar } from './nav-bar';
+
 export { default as Pagination } from './pagination';
 
 export { default as Row } from './row';

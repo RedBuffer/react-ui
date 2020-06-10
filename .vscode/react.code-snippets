@@ -6,7 +6,7 @@
       "import classnames from 'classnames';",
       "",
       "type PropTypes = {",
-      "\tchildren: React.ReactNode;",
+      "\tchildren?: React.ReactNode;",
       "};",
       "",
       "const Component = ({ children }: PropTypes): React.ReactElement => {",
