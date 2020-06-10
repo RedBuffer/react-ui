@@ -1,12 +1,35 @@
 {
   "name": "@redbuffer/react-ui",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A React components implementation library",
   "license": "MIT",
+  "keywords": [
+    "redbuffer",
+    "component",
+    "components",
+    "design",
+    "frontend",
+    "react",
+    "react-component",
+    "tailwind",
+    "ui"
+  ],
+  "bugs": {
+    "url": "https://github.com/RedBuffer/react-ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RedBuffer/react-ui"
+  },
+  "contributors": [
+    "Redbuffer"
+  ],
+  "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "clean": "rimraf dist storybook-static",
     "dev": "yarn build:css && start-storybook -p 6006",
+    "pre-publish": "yarn test",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "build:storybook": "build-storybook",
     "build:css": "postcss components/_asset/tailwind.css -o components/_asset/main.css"
