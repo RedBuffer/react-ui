@@ -2,7 +2,6 @@ import * as React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import Dropdown from './Dropdown';
-import Menu from '../Menu';
 
 describe('Dropdown', () => {
   let handleClick;
@@ -17,23 +16,23 @@ describe('Dropdown', () => {
     wrapper = mount(
       <Dropdown
         overlay={
-          <Menu>
-            <Menu.MenuItem>
+          <ul>
+            <li>
               <a id="item-1" onClick={callHandleEdit('item 1')}>
                 Item 1
               </a>
-            </Menu.MenuItem>
-            <Menu.MenuItem>
+            </li>
+            <li>
               <a id="item-2" onClick={callHandleEdit('item 2')}>
                 Item 2
               </a>
-            </Menu.MenuItem>
-            <Menu.MenuItem>
+            </li>
+            <li>
               <a id="item-3" onClick={callHandleEdit('item 3')}>
                 Item 3
               </a>
-            </Menu.MenuItem>
-          </Menu>
+            </li>
+          </ul>
         }
       />,
     );
