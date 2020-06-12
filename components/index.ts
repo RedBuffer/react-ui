@@ -14,6 +14,8 @@ export { default as Container } from './container';
 
 export { default as Description } from './description';
 
+export { default as Divider } from './divider';
+
 export { default as Input } from './input';
 
 export { default as Layout } from './layout';
