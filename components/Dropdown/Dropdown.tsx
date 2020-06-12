@@ -1,39 +1,14 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-type Align = {
-  points?: [string, string];
-  offset?: [number, number];
-  targetOffset?: [number, number];
-  overflow?: {
-    adjustX?: boolean;
-    adjustY?: boolean;
-  };
-  useCssRight?: boolean;
-  useCssBottom?: boolean;
-  useCssTransform?: boolean;
-};
-
-interface Classes {
-  dropdown?: string;
-
-  button?: string;
-
-  content?: string;
-}
-
 export interface PropTypes {
   style?: React.CSSProperties;
 
   className?: string;
 
-  classes?: Classes;
-
   overlay: React.ReactElement;
 
   disabled?: boolean;
-
-  align?: Align;
 }
 
 const Dropdown = ({
@@ -41,7 +16,6 @@ const Dropdown = ({
   overlay,
   disabled,
   className,
-  classes = {},
   ...restProps
 }: PropTypes): React.ReactElement => {
   return (
@@ -52,7 +26,6 @@ const Dropdown = ({
         'relative',
         'inline-block',
         className,
-        classes.dropdown,
       )}
       style={style}
       {...restProps}
@@ -65,7 +38,6 @@ const Dropdown = ({
           'btn-primary',
           'border-0',
           'cursor-pointer',
-          classes.button,
         )}
         disabled={disabled}
       >
@@ -78,7 +50,6 @@ const Dropdown = ({
           'w-32',
           'absolute',
           'z-10',
-          classes.content,
         )}
       >
         {overlay}
