@@ -6,18 +6,23 @@ export interface PropTypes {
 
   className?: string;
 
+  children: React.ReactNode;
+
   overlay: React.ReactElement;
 
-  disabled?: boolean;
+  trigger?: 'hover' | 'click';
 }
 
 const Dropdown = ({
   style,
   overlay,
-  disabled,
+  children,
+  trigger = 'hover',
   className,
   ...restProps
 }: PropTypes): React.ReactElement => {
+  const [hidden, setHidden] = React.useState(true);
+
   return (
     <div
       className={classnames(
@@ -28,32 +33,26 @@ const Dropdown = ({
         className,
       )}
       style={style}
+      onMouseEnter={() => (trigger === 'hover' ? setHidden(false) : {})}
+      onMouseLeave={() => (trigger === 'hover' ? setHidden(true) : {})}
+      onClick={() => (trigger === 'click' ? setHidden(!hidden) : {})}
       {...restProps}
     >
-      <button
-        className={classnames(
-          'react-ui-dropdown-btn',
-          'p-4',
-          'text-white',
-          'btn-primary',
-          'border-0',
-          'cursor-pointer',
-        )}
-        disabled={disabled}
-      >
-        Dropdown
-      </button>
-      <div
-        className={classnames(
-          'react-ui-dropdown-content',
-          'hidden',
-          'w-32',
-          'absolute',
-          'z-10',
-        )}
-      >
-        {overlay}
-      </div>
+      {children}
+      {!hidden ? (
+        <div
+          className={classnames(
+            'react-ui-dropdown-content',
+            'w-32',
+            'absolute',
+            'z-10',
+          )}
+        >
+          {overlay}
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
