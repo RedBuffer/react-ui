@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should render correctly 1`] = `
+<div
+  className="px-0 py-2 shadow bg-white box-border overflow-x-auto overflow-y-hidden whitespace-no-wrap"
+>
+  <ul
+    className="list-none p-0 m-0"
+  />
+</div>
+`;
+
+exports[`Menu should render correctly with menu items 1`] = `
+<Component>
+  <div
+    className="px-0 py-2 shadow bg-white box-border overflow-x-auto overflow-y-hidden whitespace-no-wrap"
+  >
+    <ul
+      className="list-none p-0 m-0"
+    >
+      <Component>
+        <li
+          className="m-0 px-4 py-2 relative list-none btn-light react-ui-menu-item"
+        >
+          <a
+            id="item-1"
+            onClick={[Function]}
+          >
+            Item 1
+          </a>
+        </li>
+      </Component>
+      <Component>
+        <li
+          className="m-0 px-4 py-2 relative list-none btn-light react-ui-menu-item"
+        >
+          <a
+            id="item-2"
+            onClick={[Function]}
+          >
+            Item 2
+          </a>
+        </li>
+      </Component>
+      <Component>
+        <li
+          className="m-0 px-4 py-2 relative list-none btn-light react-ui-menu-item"
+        >
+          <a
+            id="item-3"
+            onClick={[Function]}
+          >
+            Item 3
+          </a>
+        </li>
+      </Component>
+    </ul>
+  </div>
+</Component>
+`;
