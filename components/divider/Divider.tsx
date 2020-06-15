@@ -2,38 +2,38 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 interface PropTypes {
+  children?: React.ReactNode;
+
   className?: string;
 
   style?: React.CSSProperties;
-
-  children?: React.ReactNode;
 }
 
-const Divider = ({
+const Component = ({
+  children,
   className,
   style,
-  children,
   ...restProps
 }: PropTypes): React.ReactElement => {
   return (
     <div
       className={classnames(
-        'react-ui-divider',
-        'border-gray-500',
-        'border-t',
-        'my-4',
         'p-0',
-        'font-medium',
-        'min-w-full',
+        'my-4',
         'w-full',
+        'border-t',
+        'min-w-full',
+        'font-medium',
+        'border-gray-500',
         children ? 'divider-with-text' : '',
+        'react-ui-divider',
         className,
       )}
       style={style}
       {...restProps}
     >
       {children ? (
-        <span className={classnames('inline-block', 'px-2')}>{children}</span>
+        <span className={classnames('px-2', 'inline-block')}>{children}</span>
       ) : (
         <></>
       )}
@@ -41,4 +41,4 @@ const Divider = ({
   );
 };
 
-export default Divider;
+export default Component;
