@@ -34,12 +34,18 @@ describe('Dropdown', () => {
             </li>
           </ul>
         }
-      />,
+      >
+        <span>dropdown</span>
+      </Dropdown>,
     );
   });
 
   it('should render correctly', () => {
-    const component = shallow(<Dropdown overlay={<></>} />);
+    const component = shallow(
+      <Dropdown overlay={<></>}>
+        <span>dropdown</span>
+      </Dropdown>,
+    );
 
     expect(component).toMatchSnapshot();
   });
@@ -50,7 +56,16 @@ describe('Dropdown', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('click on menu item 1 ', () => {
+  it('click on menu item 1 when trigger is "hover"', () => {
+    wrapper.simulate('mouseenter');
+    wrapper.find('#item-1').hostNodes().simulate('click');
+
+    expect(handleClick.mock.calls[0][0]).toBe('item 1');
+  });
+
+  it('click on menu item 1 when trigger is "click"', () => {
+    wrapper.setProps({ trigger: 'click' });
+    wrapper.find('.react-ui-dropdown').hostNodes().simulate('click');
     wrapper.find('#item-1').hostNodes().simulate('click');
 
     expect(handleClick.mock.calls[0][0]).toBe('item 1');
