@@ -1,39 +1,50 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
+import Item from './Item';
 import SubMenu from './SubMenu';
 import ImageButton from './ImageButton';
 import ToggleMenuButton from './ToggleMenuButton';
 
 type MenuItem = {
-  title: string;
+  key: string;
+  text?: string;
+  selected?: boolean;
+};
+
+type SubMenuItem = {
+  key: string;
+  text?: string;
 };
 
 interface PropTypes
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLElement>,
-    HTMLElement
+  extends Omit<
+    Omit<
+      React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
+      'children' | 'as'
+    >,
+    'onClick'
   > {
-  items?: MenuItem[];
-
+  menuItems?: MenuItem[];
   brand?: React.ReactNode;
-
-  selectedKeys?: string[];
-
-  children?: React.ReactNode;
+  subMenuItems?: SubMenuItem[];
+  onClick?: (key: string) => void;
 }
 
 const Component = ({
   brand,
-  children,
   className,
-  // selectedKeys = [],
+  menuItems = [],
+  subMenuItems = [],
+  // eslint-disable-next-line
+  onClick = () => {},
   ...restProps
 }: PropTypes): React.ReactElement => {
   const [menu, setMenu] = React.useState(false);
+  const [subMenu, setSubMenu] = React.useState(false);
 
   return (
-    <nav {...restProps} className={classnames(className, 'bg-gray-800')}>
+    <nav {...restProps} className={classnames('bg-gray-800', className)}>
       <div
         className={classnames(
           'px-2',
@@ -64,26 +75,47 @@ const Component = ({
               'sm:justify-start',
             )}
           >
-            <div className={classnames('flex-shrink-0')}>
-              {brand}
-              {/* <img
-                className="block lg:hidden h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-on-dark.svg"
-                alt="Workflow logo"
-              />
-              <img
-                className="hidden lg:block h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-logo-on-dark.svg"
-                alt="Workflow logo"
-              /> */}
-            </div>
+            <div className={classnames('flex-shrink-0')}>{brand}</div>
 
             <div className={classnames('hidden', 'sm:block', 'sm:ml-6')}>
-              <div className={classnames('flex')}>{children}</div>
+              <div className={classnames('flex')}>
+                {menuItems.map((menuItem, index) => (
+                  <Item
+                    active={menuItem.selected}
+                    className={classnames(
+                      index && 'ml-4',
+                      'text-sm',
+                      'leading-5',
+                      'cursor-pointer',
+                      menuItem.selected && 'bg-gray-900',
+                      !menuItem.selected && 'hover:text-white',
+                      !menuItem.selected && 'hover:bg-gray-700',
+                      menuItem.selected ? 'text-white' : 'text-gray-300',
+                    )}
+                    key={`nav_menu_item_${menuItem.key}`}
+                    onClick={() => onClick(menuItem.key)}
+                  >
+                    {menuItem.text}
+                  </Item>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div
+            className={classnames(
+              'flex',
+              'pr-2',
+              'right-0',
+              'sm:ml-6',
+              'sm:pr-0',
+              'absolute',
+              'inset-y-0',
+              'sm:static',
+              'items-center',
+              'sm:inset-auto',
+            )}
+          >
             {/* <!-- Profile dropdown --> */}
             <div className={classnames('ml-3', 'relative')}>
               <ImageButton src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
@@ -97,7 +129,32 @@ const Component = ({
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95"
           --> */}
-              <SubMenu />
+              <SubMenu hidden={subMenu}>
+                {subMenuItems.map((subMenuItem) => (
+                  <a
+                    className={classnames(
+                      'block',
+                      'px-4',
+                      'py-2',
+                      'text-sm',
+                      'leading-5',
+                      'ease-in-out',
+                      'text-gray-700',
+                      'focus:bg-gray-100',
+                      'hover:bg-gray-100',
+                      'focus:outline-none',
+                      'transition duration-150',
+                    )}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onClick(subMenuItem.key);
+                    }}
+                    key={`nav_submenu_item_${subMenuItem.key}`}
+                  >
+                    {subMenuItem.text}
+                  </a>
+                ))}
+              </SubMenu>
             </div>
           </div>
         </div>
@@ -110,17 +167,22 @@ const Component = ({
   --> */}
       <div className={classnames('hidden', 'sm:hidden')}>
         <div className={classnames('pb-3', 'pt-2', 'px-2')}>
-          {/* <MenuItem>Dashboard</MenuItem>
-          <MenuItem>Team</MenuItem>
-          <MenuItem>Projects</MenuItem>
-          <MenuItem>Calendar</MenuItem>
-          <a
-            href="#"
-            className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
-          >
-            Team
-          </a> */}
-          {children}
+          {menuItems.map((menuItem, index) => (
+            <Item
+              className={classnames(
+                'text-base',
+                'text-gray-300',
+                index && 'mt-1',
+                'hover:text-white',
+                'hover:bg-gray-700',
+              )}
+              active={menuItem.selected}
+              onClick={() => onClick(menuItem.key)}
+              key={`nav_menu_sm_item_${menuItem.key}`}
+            >
+              {menuItem.text}
+            </Item>
+          ))}
         </div>
       </div>
     </nav>
