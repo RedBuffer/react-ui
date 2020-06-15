@@ -157,9 +157,3 @@
 .btn-dark:hover {
   @apply bg-gray-800;
 }
-
-/* Dropdown Style */
-
-.react-ui-dropdown:hover .react-ui-dropdown-content {
-  @apply block;
-}
