@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown should render correctly 1`] = `
+<div
+  className="m-4 relative inline-block react-ui-dropdown"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <span>
+    dropdown
+  </span>
+</div>
+`;
+
+exports[`Dropdown should render correctly with menu 1`] = `
+<Component
+  overlay={
+    <ul>
+      <li>
+        <a
+          id="item-1"
+          onClick={[Function]}
+        >
+          Item 1
+        </a>
+      </li>
+      <li>
+        <a
+          id="item-2"
+          onClick={[Function]}
+        >
+          Item 2
+        </a>
+      </li>
+      <li>
+        <a
+          id="item-3"
+          onClick={[Function]}
+        >
+          Item 3
+        </a>
+      </li>
+    </ul>
+  }
+>
+  <div
+    className="m-4 relative inline-block react-ui-dropdown"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <span>
+      dropdown
+    </span>
+  </div>
+</Component>
+`;
