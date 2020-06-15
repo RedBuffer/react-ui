@@ -1,8 +1,8 @@
-import Breadcrumb from './Breadcrumb';
+import Origin from './Breadcrumb';
 import BreadcrumbItem from './BreadcrumbItem';
 import BreadcrumbSeparator from './BreadcrumbSeparator';
 
-type Type = typeof Breadcrumb;
+type Type = typeof Origin;
 
 interface ComponentInterface extends Type {
   item: typeof BreadcrumbItem;
@@ -10,7 +10,8 @@ interface ComponentInterface extends Type {
   separator: typeof BreadcrumbSeparator;
 }
 
-const Component: ComponentInterface = Breadcrumb as ComponentInterface;
+const Component: ComponentInterface = Origin as ComponentInterface;
+
 Component.item = BreadcrumbItem;
 Component.separator = BreadcrumbSeparator;
 

@@ -4,20 +4,20 @@ import classnames from 'classnames';
 import BreadcrumbSeparator from './BreadcrumbSeparator';
 
 export interface PropTypes {
-  style?: React.CSSProperties;
+  children?: React.ReactNode | React.ReactNode[];
 
   className?: string;
 
-  separator?: string | typeof BreadcrumbSeparator;
+  separator?: string;
 
-  children: React.ReactNode | React.ReactNode[];
+  style?: React.CSSProperties;
 }
 
 const Breadcrumb = ({
-  style,
-  className,
   children,
+  className,
   separator = '/',
+  style,
   ...restProps
 }: PropTypes): React.ReactElement => {
   const crumbs = Array.isArray(children) ? (
@@ -44,11 +44,11 @@ const Breadcrumb = ({
   return (
     <div
       className={classnames(
-        'react-ui-breadcrumb',
-        'p-2',
         'm-0',
+        'p-2',
         'box-border',
         'font-medium',
+        'react-ui-breadcrumb',
         className,
       )}
       style={style}

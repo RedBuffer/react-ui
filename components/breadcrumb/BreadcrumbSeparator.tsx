@@ -2,22 +2,22 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 export interface PropTypes {
+  children?: React.ReactNode;
+
   className?: string;
 
   style?: React.CSSProperties;
-
-  children?: React.ReactNode;
 }
 
 const BreadcrumbSeparator = ({
-  className,
   children,
+  className,
   style,
   ...restProps
 }: PropTypes): React.ReactElement => {
   return (
     <span
-      className={classnames('react-ui-breadcrumb-separator', 'mx-2', className)}
+      className={classnames('mx-2', 'react-ui-breadcrumb-separator', className)}
       style={style}
       {...restProps}
     >
