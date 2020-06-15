@@ -2,7 +2,7 @@
 
 exports[`Menu should render correctly 1`] = `
 <div
-  className="box-border bg-white shadow whitespace-no-wrap py-2 px-0 overflow-y-hidden overflow-x-auto"
+  className="px-0 py-2 shadow bg-white box-border overflow-x-auto overflow-y-hidden whitespace-no-wrap"
 >
   <ul
     className="list-none p-0 m-0"
@@ -11,16 +11,16 @@ exports[`Menu should render correctly 1`] = `
 `;
 
 exports[`Menu should render correctly with menu items 1`] = `
-<Menu>
+<Component>
   <div
-    className="box-border bg-white shadow whitespace-no-wrap py-2 px-0 overflow-y-hidden overflow-x-auto"
+    className="px-0 py-2 shadow bg-white box-border overflow-x-auto overflow-y-hidden whitespace-no-wrap"
   >
     <ul
       className="list-none p-0 m-0"
     >
-      <MenuItem>
+      <Component>
         <li
-          className="react-ui-menu-item py-2 px-4 m-0 relative list-none btn-light"
+          className="m-0 px-4 py-2 relative list-none btn-light react-ui-menu-item"
         >
           <a
             id="item-1"
@@ -29,10 +29,10 @@ exports[`Menu should render correctly with menu items 1`] = `
             Item 1
           </a>
         </li>
-      </MenuItem>
-      <MenuItem>
+      </Component>
+      <Component>
         <li
-          className="react-ui-menu-item py-2 px-4 m-0 relative list-none btn-light"
+          className="m-0 px-4 py-2 relative list-none btn-light react-ui-menu-item"
         >
           <a
             id="item-2"
@@ -41,10 +41,10 @@ exports[`Menu should render correctly with menu items 1`] = `
             Item 2
           </a>
         </li>
-      </MenuItem>
-      <MenuItem>
+      </Component>
+      <Component>
         <li
-          className="react-ui-menu-item py-2 px-4 m-0 relative list-none btn-light"
+          className="m-0 px-4 py-2 relative list-none btn-light react-ui-menu-item"
         >
           <a
             id="item-3"
@@ -53,8 +53,8 @@ exports[`Menu should render correctly with menu items 1`] = `
             Item 3
           </a>
         </li>
-      </MenuItem>
+      </Component>
     </ul>
   </div>
-</Menu>
+</Component>
 `;

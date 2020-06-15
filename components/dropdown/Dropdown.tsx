@@ -2,23 +2,19 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 export interface PropTypes {
-  style?: React.CSSProperties;
-
   className?: string;
-
   children: React.ReactNode;
-
+  style?: React.CSSProperties;
   overlay: React.ReactElement;
-
   trigger?: 'hover' | 'click';
 }
 
-const Dropdown = ({
+const Component = ({
   style,
   overlay,
   children,
-  trigger = 'hover',
   className,
+  trigger = 'hover',
   ...restProps
 }: PropTypes): React.ReactElement => {
   const [hidden, setHidden] = React.useState(true);
@@ -26,10 +22,10 @@ const Dropdown = ({
   return (
     <div
       className={classnames(
-        'react-ui-dropdown',
         'm-4',
         'relative',
         'inline-block',
+        'react-ui-dropdown',
         className,
       )}
       style={style}
@@ -42,19 +38,17 @@ const Dropdown = ({
       {!hidden ? (
         <div
           className={classnames(
-            'react-ui-dropdown-content',
             'w-32',
-            'absolute',
             'z-10',
+            'absolute',
+            'react-ui-dropdown-content',
           )}
         >
           {overlay}
         </div>
-      ) : (
-        <></>
-      )}
+      ) : null}
     </div>
   );
 };
 
-export default Dropdown;
+export default Component;

@@ -11,15 +11,15 @@ export const hover = (): React.ReactElement => (
   <Dropdown
     overlay={
       <Menu>
-        <Menu.MenuItem>
+        <Menu.Item>
           <a href="#">Item 1</a>
-        </Menu.MenuItem>
-        <Menu.MenuItem>
+        </Menu.Item>
+        <Menu.Item>
           <a href="#">Item 2</a>
-        </Menu.MenuItem>
-        <Menu.MenuItem>
+        </Menu.Item>
+        <Menu.Item>
           <a href="#">Item 3</a>
-        </Menu.MenuItem>
+        </Menu.Item>
       </Menu>
     }
   >
@@ -34,15 +34,15 @@ export const click = (): React.ReactElement => (
     trigger={'click'}
     overlay={
       <Menu>
-        <Menu.MenuItem>
+        <Menu.Item>
           <a href="#">Item 1</a>
-        </Menu.MenuItem>
-        <Menu.MenuItem>
+        </Menu.Item>
+        <Menu.Item>
           <a href="#">Item 2</a>
-        </Menu.MenuItem>
-        <Menu.MenuItem>
+        </Menu.Item>
+        <Menu.Item>
           <a href="#">Item 3</a>
-        </Menu.MenuItem>
+        </Menu.Item>
       </Menu>
     }
   >

@@ -2,16 +2,13 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 export interface PropTypes {
-  style?: React.CSSProperties;
-
   className?: string;
-
   selected?: boolean;
-
   children: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
-const MenuItem = ({
+const Component = ({
   style,
   children,
   className,
@@ -20,13 +17,13 @@ const MenuItem = ({
   return (
     <li
       className={classnames(
-        'react-ui-menu-item',
-        'py-2',
-        'px-4',
         'm-0',
+        'px-4',
+        'py-2',
         'relative',
         'list-none',
         'btn-light',
+        'react-ui-menu-item',
         className,
       )}
       style={style}
@@ -37,4 +34,4 @@ const MenuItem = ({
   );
 };
 
-export default MenuItem;
+export default Component;

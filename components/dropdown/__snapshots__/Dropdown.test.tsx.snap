@@ -2,7 +2,7 @@
 
 exports[`Dropdown should render correctly 1`] = `
 <div
-  className="react-ui-dropdown m-4 relative inline-block"
+  className="m-4 relative inline-block react-ui-dropdown"
   onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -14,7 +14,7 @@ exports[`Dropdown should render correctly 1`] = `
 `;
 
 exports[`Dropdown should render correctly with menu 1`] = `
-<Dropdown
+<Component
   overlay={
     <ul>
       <li>
@@ -45,7 +45,7 @@ exports[`Dropdown should render correctly with menu 1`] = `
   }
 >
   <div
-    className="react-ui-dropdown m-4 relative inline-block"
+    className="m-4 relative inline-block react-ui-dropdown"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -54,5 +54,5 @@ exports[`Dropdown should render correctly with menu 1`] = `
       dropdown
     </span>
   </div>
-</Dropdown>
+</Component>
 `;

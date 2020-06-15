@@ -9,14 +9,14 @@ export default {
 
 export const Basic = (): React.ReactElement => (
   <Menu className="w-20">
-    <Menu.MenuItem>
+    <Menu.Item>
       <a href="#">Item 1</a>
-    </Menu.MenuItem>
-    <Menu.MenuItem>
+    </Menu.Item>
+    <Menu.Item>
       <a href="#">Item 2</a>
-    </Menu.MenuItem>
-    <Menu.MenuItem>
+    </Menu.Item>
+    <Menu.Item>
       <a href="#">Item 3</a>
-    </Menu.MenuItem>
+    </Menu.Item>
   </Menu>
 );

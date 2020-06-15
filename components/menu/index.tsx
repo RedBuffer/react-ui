@@ -1,17 +1,17 @@
-import Menu from './Menu';
-import MenuItem from './MenuItem';
+import Item from './Item';
+import Origin from './Menu';
 
-type Type = typeof Menu;
+type Type = typeof Origin;
 
-export interface ComponentInterface extends Type {
-  MenuItem: typeof MenuItem;
+export interface Menu extends Type {
+  Item: typeof Item;
 }
 
-const Component: ComponentInterface = Menu as ComponentInterface;
+const Component: Menu = Origin as Menu;
 
-Component.MenuItem = MenuItem;
+Component.Item = Item;
 
 export { default as Menu } from './Menu';
-export { default as MenuItem } from './MenuItem';
+export { default as Item } from './Item';
 
 export default Component;
