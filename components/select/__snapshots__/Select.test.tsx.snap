@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select should render correctly 1`] = `
+<select
+  className="px-2 border w-full rounded shadow-sm transition ease-in-out duration-150 text-default text-md py-2 leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+/>
+`;
+
+exports[`Select should render correctly with options 1`] = `
+<Component
+  onChange={[MockFunction]}
+>
+  <select
+    className="px-2 border w-full rounded shadow-sm transition ease-in-out duration-150 text-default text-md py-2 leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+    onChange={[MockFunction]}
+  >
+    <Component
+      value="option 1"
+    >
+      <option
+        className=""
+        value="option 1"
+      >
+        Option 1
+      </option>
+    </Component>
+    <Component
+      id="option-2"
+      value="option 2"
+    >
+      <option
+        className=""
+        id="option-2"
+        value="option 2"
+      >
+        Option 2
+      </option>
+    </Component>
+    <Component
+      id="option-3"
+      value="option 3"
+    >
+      <option
+        className=""
+        id="option-3"
+        value="option 3"
+      >
+        Option 3
+      </option>
+    </Component>
+    <Component
+      id="option-4"
+      value="option 4"
+    >
+      <option
+        className=""
+        id="option-4"
+        value="option 4"
+      >
+        Option 4
+      </option>
+    </Component>
+  </select>
+</Component>
+`;
