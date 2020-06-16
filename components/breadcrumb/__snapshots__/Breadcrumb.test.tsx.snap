@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb should render correctly 1`] = `
+<div
+  className="m-0 p-2 box-border font-medium react-ui-breadcrumb"
+>
+  <span
+    className="text-primary"
+  />
+</div>
+`;
+
+exports[`Breadcrumb should render correctly with BreadcrumbItem 1`] = `
+<Component>
+  <div
+    className="m-0 p-2 box-border font-medium react-ui-breadcrumb"
+  >
+    <span
+      className="text-primary"
+    >
+      <Component>
+        <span
+          className="react-ui-breadcrumb-item"
+        >
+          <a
+            href="#"
+          >
+            crumb 1
+          </a>
+        </span>
+      </Component>
+    </span>
+  </div>
+</Component>
+`;
+
+exports[`Breadcrumb should render correctly with BreadcrumbItem and string separator 1`] = `
+<Component
+  separator="///"
+>
+  <div
+    className="m-0 p-2 box-border font-medium react-ui-breadcrumb"
+  >
+    <span
+      className="text-primary"
+    >
+      <Component>
+        <span
+          className="react-ui-breadcrumb-item"
+        >
+          <a
+            href="#"
+          >
+            crumb 1
+          </a>
+        </span>
+      </Component>
+    </span>
+  </div>
+</Component>
+`;

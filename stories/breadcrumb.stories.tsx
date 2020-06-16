@@ -9,36 +9,36 @@ export default {
 
 export const single = (): React.ReactElement => (
   <Breadcrumb className="">
-    <Breadcrumb.item>
+    <Breadcrumb.Item>
       <a href="#">crumb 1</a>
-    </Breadcrumb.item>
+    </Breadcrumb.Item>
   </Breadcrumb>
 );
 
 export const multiple = (): React.ReactElement => (
   <Breadcrumb className="">
-    <Breadcrumb.item>
+    <Breadcrumb.Item>
       <a href="#">crumb 1</a>
-    </Breadcrumb.item>
-    <Breadcrumb.item>
+    </Breadcrumb.Item>
+    <Breadcrumb.Item>
       <a href="#">crumb 2</a>
-    </Breadcrumb.item>
-    <Breadcrumb.item>
+    </Breadcrumb.Item>
+    <Breadcrumb.Item>
       <a href="#">crumb 3</a>
-    </Breadcrumb.item>
+    </Breadcrumb.Item>
   </Breadcrumb>
 );
 
 export const customSeparator = (): React.ReactElement => (
   <Breadcrumb separator="//" className="">
-    <Breadcrumb.item>
+    <Breadcrumb.Item>
       <a href="#">crumb 1</a>
-    </Breadcrumb.item>
-    <Breadcrumb.item>
+    </Breadcrumb.Item>
+    <Breadcrumb.Item>
       <a href="#">crumb 2</a>
-    </Breadcrumb.item>
-    <Breadcrumb.item>
+    </Breadcrumb.Item>
+    <Breadcrumb.Item>
       <a href="#">crumb 3</a>
-    </Breadcrumb.item>
+    </Breadcrumb.Item>
   </Breadcrumb>
 );

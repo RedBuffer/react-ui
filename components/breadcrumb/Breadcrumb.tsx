@@ -1,23 +1,20 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import BreadcrumbSeparator from './BreadcrumbSeparator';
+import Separator from './Separator';
 
 export interface PropTypes {
-  children?: React.ReactNode | React.ReactNode[];
-
   className?: string;
-
   separator?: string;
-
   style?: React.CSSProperties;
+  children?: React.ReactNode | React.ReactNode[];
 }
 
-const Breadcrumb = ({
+const Component = ({
+  style,
   children,
   className,
   separator = '/',
-  style,
   ...restProps
 }: PropTypes): React.ReactElement => {
   const crumbs = Array.isArray(children) ? (
@@ -25,15 +22,11 @@ const Breadcrumb = ({
       const lastItem = index === children.length - 1;
       return (
         <span
-          className={classnames(lastItem ? 'text-primary' : 'text-fade')}
           key={index}
+          className={classnames(lastItem ? 'text-primary' : 'text-fade')}
         >
           {element}
-          {!lastItem ? (
-            <BreadcrumbSeparator>{separator}</BreadcrumbSeparator>
-          ) : (
-            <></>
-          )}
+          {lastItem ? null : <Separator>{separator}</Separator>}
         </span>
       );
     })
@@ -59,4 +52,4 @@ const Breadcrumb = ({
   );
 };
 
-export default Breadcrumb;
+export default Component;

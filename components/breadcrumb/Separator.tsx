@@ -2,17 +2,15 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 export interface PropTypes {
-  children?: React.ReactNode;
-
   className?: string;
-
+  children?: React.ReactNode;
   style?: React.CSSProperties;
 }
 
-const BreadcrumbSeparator = ({
+const Component = ({
+  style,
   children,
   className,
-  style,
   ...restProps
 }: PropTypes): React.ReactElement => {
   return (
@@ -26,4 +24,4 @@ const BreadcrumbSeparator = ({
   );
 };
 
-export default BreadcrumbSeparator;
+export default Component;

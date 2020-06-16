@@ -2,17 +2,15 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 export interface PropTypes {
-  children: React.ReactNode;
-
   className?: string;
-
+  children: React.ReactNode;
   style?: React.CSSProperties;
 }
 
-const BreadcrumbItem = ({
+const Component = ({
+  style,
   children,
   className,
-  style,
   ...restProps
 }: PropTypes): React.ReactElement => {
   return (
@@ -26,4 +24,4 @@ const BreadcrumbItem = ({
   );
 };
 
-export default BreadcrumbItem;
+export default Component;
