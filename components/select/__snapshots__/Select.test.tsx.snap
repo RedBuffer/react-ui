@@ -2,7 +2,7 @@
 
 exports[`Select should render correctly 1`] = `
 <select
-  className="px-2 border w-full rounded shadow-sm transition ease-in-out duration-150 text-default text-md py-2 leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+  className="px-0 border w-full rounded shadow-sm transition ease-in-out duration-150 text-default text-md py-2 leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
 />
 `;
 
@@ -11,7 +11,7 @@ exports[`Select should render correctly with options 1`] = `
   onChange={[MockFunction]}
 >
   <select
-    className="px-2 border w-full rounded shadow-sm transition ease-in-out duration-150 text-default text-md py-2 leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
+    className="px-0 border w-full rounded shadow-sm transition ease-in-out duration-150 text-default text-md py-2 leading-tight focus:outline-none focus:shadow-outline hover:border-blue-500"
     onChange={[MockFunction]}
   >
     <Component
