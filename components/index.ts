@@ -30,6 +30,8 @@ export { default as Pagination } from './pagination';
 
 export { default as Row } from './row';
 
+export { default as Select } from './select';
+
 export { default as Table } from './table';
 
 export { default as Typography } from './typography';
