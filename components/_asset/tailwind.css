@@ -157,3 +157,23 @@
 .btn-dark:hover {
   @apply bg-gray-800;
 }
+
+/* styles for button types */
+
+.divider-with-text {
+  @apply flex;
+  @apply whitespace-no-wrap;
+  @apply text-center;
+  @apply border-0;
+}
+
+.divider-with-text::before,  .divider-with-text::after{
+  @apply relative;
+  @apply border-t;
+  @apply border-gray-500;
+  @apply transform;
+  @apply translate-y-1/2;
+  @apply w-1/2;
+  top: 50%;
+  content: '';
+}
