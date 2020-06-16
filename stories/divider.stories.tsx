@@ -8,7 +8,7 @@ export default {
 };
 
 export const Basic = (): React.ReactElement => (
-  <div className={'w-40 p-2 border-2 ml-10'}>
+  <div className="w-40 p-2 border-2 ml-10">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne
       merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen,
@@ -23,8 +23,8 @@ export const Basic = (): React.ReactElement => (
   </div>
 );
 
-export const text = (): React.ReactElement => (
-  <div className={'w-40 p-2 border-2 ml-10'}>
+export const WithText = (): React.ReactElement => (
+  <div className="w-40 p-2 border-2 ml-10">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne
       merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen,
@@ -39,8 +39,8 @@ export const text = (): React.ReactElement => (
   </div>
 );
 
-export const badge = (): React.ReactElement => (
-  <div className={'w-40 p-2 border-2 ml-10'}>
+export const WithBadge = (): React.ReactElement => (
+  <div className="w-40 p-2 border-2 ml-10">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne
       merninisti licere mihi ista probare, quae sunt a te dicta? Refert tamen,

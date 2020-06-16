@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider should render correctly 1`] = `
+<div
+  className="p-0 my-4 w-full border-t min-w-full font-medium border-gray-500 react-ui-divider"
+/>
+`;
+
+exports[`Divider should render correctly with children 1`] = `
+<Component>
+  <div
+    className="p-0 my-4 w-full border-t min-w-full font-medium border-gray-500 divider-with-text react-ui-divider"
+  >
+    <span
+      className="px-2 inline-block"
+    >
+      <button>
+        CHILDREN
+      </button>
+    </span>
+  </div>
+</Component>
+`;
+
+exports[`Divider should render correctly with text 1`] = `
+<div
+  className="p-0 my-4 w-full border-t min-w-full font-medium border-gray-500 divider-with-text react-ui-divider"
+>
+  <span
+    className="px-2 inline-block"
+  >
+    TEXT
+  </span>
+</div>
+`;

@@ -2,17 +2,15 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 interface PropTypes {
-  children?: React.ReactNode;
-
   className?: string;
-
+  children?: React.ReactNode;
   style?: React.CSSProperties;
 }
 
 const Component = ({
+  style,
   children,
   className,
-  style,
   ...restProps
 }: PropTypes): React.ReactElement => {
   return (
@@ -25,7 +23,7 @@ const Component = ({
         'min-w-full',
         'font-medium',
         'border-gray-500',
-        children ? 'divider-with-text' : '',
+        children && 'divider-with-text',
         'react-ui-divider',
         className,
       )}
@@ -34,9 +32,7 @@ const Component = ({
     >
       {children ? (
         <span className={classnames('px-2', 'inline-block')}>{children}</span>
-      ) : (
-        <></>
-      )}
+      ) : null}
     </div>
   );
 };
