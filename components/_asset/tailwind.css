@@ -158,6 +158,16 @@
   @apply bg-gray-800;
 }
 
+/* styles for breadcrumbs */
+
+.text-fade {
+  @apply text-gray-500
+}
+
+.react-ui-breadcrumb a:hover {
+  @apply underline;
+}
+
 /* styles for button types */
 
 .divider-with-text {
