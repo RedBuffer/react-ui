@@ -118,7 +118,10 @@ const Component = ({
           >
             {/* <!-- Profile dropdown --> */}
             <div className={classnames('ml-3', 'relative')}>
-              <ImageButton src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
+              <ImageButton
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                onClick={() => setSubMenu(!subMenu)}
+              />
               {/* <!--
             Profile dropdown panel, show/hide based on dropdown state.
 
@@ -129,7 +132,15 @@ const Component = ({
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95"
           --> */}
-              <SubMenu hidden={subMenu}>
+              <SubMenu
+                hidden={!subMenu}
+                onFocus={() => {
+                  console.log('focus');
+                }}
+                onBlur={() => {
+                  console.log('blur');
+                }}
+              >
                 {subMenuItems.map((subMenuItem) => (
                   <a
                     className={classnames(
