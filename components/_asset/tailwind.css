@@ -157,3 +157,55 @@
 .btn-dark:hover {
   @apply bg-gray-800;
 }
+
+/* styles for checkbox types */
+
+.react-ui-checkbox-label:hover input ~ .react-ui-checkbox-checkmark {
+  @apply bg-gray-500;
+}
+
+.react-ui-checkbox-label input:checked ~ .react-ui-checkbox-checkmark {
+  @apply bg-blue-500;
+}
+
+
+.react-ui-checkbox-label input:checked ~ .react-ui-checkbox-checkmark:after {
+  @apply block;
+}
+
+.react-ui-checkbox-checkmark:after {
+  @apply hidden;
+  @apply absolute;
+  content: "";
+}
+
+.react-ui-checkbox-label .react-ui-checkbox-checkmark:after {
+  @apply border-white;
+  @apply transform;
+  @apply rotate-45;
+}
+
+.checkmark-sm:after {
+  top: 5px;
+  left: 8px;
+  width: 5px;
+  height: 10px;
+  border-width: 0 3px 3px 0;
+}
+
+.checkmark-md:after {
+  top: 5px;
+  left: 10px;
+  width: 6px;
+  height: 12px;
+  border-width: 0 3px 3px 0;
+}
+
+.checkmark-lg:after {
+  top: 7px;
+  left: 13px;
+  width: 8px;
+  height: 16px;
+  border-width: 0 4px 4px 0;
+}
+
