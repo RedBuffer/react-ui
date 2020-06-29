@@ -16,7 +16,7 @@ describe('Checkbox', () => {
     );
   });
 
-  it('should render correctly with menu', () => {
+  it('should render correctly', () => {
     const component = wrapper;
 
     expect(component).toMatchSnapshot();
