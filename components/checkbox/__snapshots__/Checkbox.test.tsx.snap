@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render correctly with menu 1`] = `
+<Component
+  id="checkbox"
+  onChange={[MockFunction]}
+>
+  <label
+    className="m-2 block relative select-none text-md cursor-pointer pl-8 react-ui-checkbox-label"
+  >
+    checkbox
+    <input
+      className="h-0 w-0 absolute opacity-0 react-ui-checkbox"
+      disabled={false}
+      id="checkbox"
+      onChange={[MockFunction]}
+      type="checkbox"
+    />
+    <span
+      className="top-0 left-0 absolute bg-gray-400 rounded h-6 w-6 p-2 checkmark-md react-ui-checkbox-checkmark"
+    />
+  </label>
+</Component>
+`;
