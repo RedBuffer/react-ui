@@ -160,7 +160,7 @@
 
 /* styles for checkbox types */
 
-.react-ui-checkbox-label:hover input ~ .react-ui-checkbox-checkmark {
+.react-ui-checkbox-label:hover input:enabled ~ .react-ui-checkbox-checkmark {
   @apply bg-gray-500;
 }
 
