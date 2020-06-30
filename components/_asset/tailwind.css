@@ -185,6 +185,33 @@
   @apply rotate-45;
 }
 
+/* styles for radio button types */
+
+.react-ui-radio-label:hover input:enabled ~ .react-ui-radio-checkmark {
+  @apply bg-gray-500;
+}
+
+.react-ui-radio-label input:checked ~ .react-ui-radio-checkmark {
+  @apply bg-blue-500;
+}
+
+.react-ui-radio-label input:checked ~ .react-ui-radio-checkmark:after {
+  @apply block;
+}
+
+.react-ui-radio-checkmark:after {
+  @apply hidden;
+  @apply absolute;
+  content: "";
+}
+
+.react-ui-radio-label .react-ui-radio-checkmark:after {
+  @apply border-white;
+  @apply transform;
+  @apply rotate-45;
+}
+
+
 .checkmark-sm:after {
   top: 5px;
   left: 8px;
@@ -208,4 +235,3 @@
   height: 16px;
   border-width: 0 4px 4px 0;
 }
-

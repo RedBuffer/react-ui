@@ -32,4 +32,6 @@ export { default as Row } from './row';
 
 export { default as Table } from './table';
 
+export { default as RadioButton } from './radio';
+
 export { default as Typography } from './typography';
